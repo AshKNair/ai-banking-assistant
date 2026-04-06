@@ -1,15 +1,15 @@
 import streamlit as st
 
-ACCESS_CODE = "demo"
-
 def check_access():
+
+    ACCESS_CODE = st.secrets["APP_ACCESS_CODE"]
 
     if "access_granted" not in st.session_state:
         st.session_state.access_granted = False
 
     if not st.session_state.access_granted:
 
-        st.title("SmartSpend AI – Restricted Demo")
+        st.title("AI Portfolio – Restricted Access")
 
         password = st.text_input(
             "Enter access code",

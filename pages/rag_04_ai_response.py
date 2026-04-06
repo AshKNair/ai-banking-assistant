@@ -25,6 +25,9 @@ Portfolio concepts demonstrated:
 import streamlit as st
 import pandas as pd
 from openai import OpenAI
+from security import check_access
+
+check_access()
 
 
 # ---------------------------------------------------------

@@ -27,6 +27,9 @@ Portfolio value demonstrated:
 """
 
 import streamlit as st
+from security import check_access
+
+check_access()
 
 
 # -------------------------------------------------------------

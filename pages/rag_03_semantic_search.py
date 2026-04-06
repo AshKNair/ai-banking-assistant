@@ -18,6 +18,9 @@ import pandas as pd
 from rag_pipeline import retrieve_relevant_transactions
 from embedding_service import generate_embedding
 from rag_pipeline import vector_store
+from security import check_access
+
+check_access()
 
 
 # ---------------------------------------------------------

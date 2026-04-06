@@ -16,6 +16,9 @@ import streamlit as st
 import pandas as pd
 
 from rag_pipeline import prepare_embeddings, vector_store
+from security import check_access
+
+check_access()
 
 
 # ---------------------------------------------------------
