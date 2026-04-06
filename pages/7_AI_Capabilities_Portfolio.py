@@ -13,6 +13,7 @@ Architecture evolution demonstrated in this solution:
 
 • Deterministic pipeline augmented with AI  
 • Conversational orchestration using session memory  
+• Retrieval Augmented Generation (RAG) for grounded AI responses  
 
 The focus is on real-world enterprise applicability rather than experimental complexity.
 """)
@@ -57,7 +58,28 @@ implemented = {
 "AI identifies spending patterns and insights from transaction history.",
 
 "Evolution from single-call to chat AI":
-"Architecture demonstrates progression from one-time AI call to conversational AI system."
+"Architecture demonstrates progression from one-time AI call to conversational AI system.",
+
+"Retrieval Augmented Generation (RAG)":
+"System retrieves only relevant transactions before sending prompt to LLM, improving accuracy and reducing token usage.",
+
+"Vector embeddings for semantic search":
+"Transaction descriptions converted into embeddings enabling similarity-based retrieval (e.g. Uber ≈ Taxi).",
+
+"Semantic search architecture":
+"User questions converted to embeddings and matched against stored vectors to retrieve relevant financial records.",
+
+"Token optimisation strategy":
+"Reduced token usage by limiting context to only relevant retrieved transactions rather than entire dataset.",
+
+"Explainable AI grounding":
+"Application shows retrieved context and prompt input, improving transparency and trust in AI responses.",
+
+"Separation of retrieval and generation layers":
+"Architecture demonstrates modular separation between vector search and LLM response generation.",
+
+"Hybrid deterministic + AI workflow":
+"Business logic controls what data is sent to AI, improving reliability and reducing hallucination risk."
 
 }
 
@@ -89,12 +111,6 @@ st.subheader("Planned AI Enhancements")
 
 planned = {
 
-"Retrieval Augmented Generation (RAG)":
-"AI retrieves only relevant financial records before generating answer. Improves accuracy and reduces prompt size.",
-
-"Vector embeddings for semantic search":
-"Text converted into numerical vectors enabling meaning-based search. Example: Uber ride and Taxi trip recognised as similar.",
-
 "AI-powered document ingestion":
 "Ability to upload documents (PDF, text) and convert them into AI-readable format.",
 
@@ -107,15 +123,6 @@ planned = {
 "AI anomaly detection patterns":
 "AI identifies unusual or abnormal spending behaviour based on context.",
 
-"Prompt optimisation experiments":
-"Experimenting with different prompt structures to improve AI accuracy and consistency.",
-
-"Domain-tuned financial reasoning":
-"Refining prompts specifically for financial analysis scenarios.",
-
-"Hybrid deterministic + AI decisions":
-"Combining traditional business rules with AI-based reasoning.",
-
 "Multi-model evaluation":
 "Comparing outputs from different AI models to assess strengths and differences.",
 
@@ -123,7 +130,22 @@ planned = {
 "Enhancing chat assistant to remember longer context across interactions.",
 
 "Semantic financial categorisation":
-"AI automatically groups transactions into categories based on meaning instead of keywords."
+"AI automatically groups transactions into categories based on meaning instead of keywords.",
+
+"Cloud-hosted vector database":
+"Replace in-memory vector store with enterprise-grade vector DB (Azure AI Search, Pinecone, pgvector).",
+
+"Secure enterprise data ingestion":
+"Integration with enterprise data sources via APIs or secure storage services.",
+
+"LLM guardrails and policy enforcement":
+"Apply structured safety controls for enterprise-grade AI usage.",
+
+"Cost monitoring and token analytics dashboard":
+"Track token usage trends for cost optimisation and governance.",
+
+"Evaluation framework for prompt performance":
+"Systematically assess response quality using defined evaluation metrics."
 
 }
 
@@ -155,9 +177,17 @@ st.info("""
 
 Hover over each capability to view explanation and examples.
 
-This is an evolving AI portfolio project focused specifically on applied AI patterns
-relevant to Solution Architecture roles.
+This portfolio project demonstrates applied AI architecture patterns
+relevant to enterprise solution design roles.
 
-Enhancements will continue to prioritise practical enterprise use cases.
+Focus areas:
+
+• reliable AI integration patterns  
+• grounded AI decision flows  
+• explainable prompt design  
+• token-efficient architecture  
+• modular AI orchestration  
+
+Future enhancements will prioritise enterprise scalability patterns.
 
 """)
